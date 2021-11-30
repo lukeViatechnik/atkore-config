@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1440, maximum-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+    integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <meta name="og:type" content="website" />
+  <meta name="twitter:card" content="photo" />
+  <title>Angular</title>
+  <link rel="stylesheet" type="text/css" href="css/load.css" />
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet" />
+  <link href="https://unpkg.com/@material/switch@canary/dist/mdc.switch.css" rel="stylesheet" />
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+  <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+      $('.dropdown-menu').dropdown()
+    })
+  </script>
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid black;
+    }
+
+    table {
+      /* width: 100%; */
+      margin: auto;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 3px;
+      padding-left: 10px;
+      width: 300px
+    }
+
+    h2 {
+      margin-left: 30%;
+      font-size: larger;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body style="margin: 0; background: #eeeff1">
+  <input type="hidden" id="anPageName" name="page" value="load" />
+  <div class="container-center-horizontal">
+    <div class="load screen">
+      <img class="image-31" src="img/image-31@1x.png" />
+      <div class="topbar">
+        <div class="overlap-group8">
+          <h1 class="primeone">ATKORE - HANGER CONFIGURATOR</h1>
+        </div>
+      </div>
+      <div class="hanger-application">
+        <div class="overlap-group7">
+          <div class="overlap-group6">
+            <div class="tab-menu">Select Hanger Application</div>
+            <div class="overlap-group5">
+              <div>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                      data-toggle="tab">Cable Tray</a></li>
+                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                      data-toggle="tab">Conduit</a></li>
+                  <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                      data-toggle="tab">Duct</a></li>
+                  <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                      data-toggle="tab">Pipe</a></li>
+                  <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                      data-toggle="tab">Custom Trapeze</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+                  <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="group-1">
+                      <div class="dropdown" style="margin-top: -10px;" style="width: 70%;">
+
+                        <label for="cableTray_Type">Select Type:</label>
+
+                        <select name="cableTray_Type" id="cableTray_Type">
+                          <option value="volvo">I Beam Cable Tray</option>
+                          <option value="saab">C Channel Cable Tray</option>
+                          <option value="mercedes">Troff Cable Tray</option>
+                          <option value="audi">Wire Basket</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <br>
+                      <div class="text-field-fill-osition-primary1" style="width: 73%;">
+                        <label class="mdc-text-field mdc-text-field--filled">
+                          <span class="mdc-text-field__ripple"></span>
+                          <span class="mdc-floating-label" id="my-label-id">Tray width (inches)</span>
+                          <input type="number" class="mdc-text-field__input" id="trayWidth2"
+                            aria-labelledby="my-label-id" value="36"/>
+                          <span class="mdc-line-ripple"></span>
+                        </label>
+                        <script>
+                          mdc.autoInit();
+                          new mdc.textField.MDCTextField(document.querySelector(".text-field-fill-osition-primary1 .mdc-text-field"));
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="profile">
+                    ...
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="messages">
+                      ...
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                </div>
+              </div>            
+
+            </div>
+
+          </div>
+          <div class="rectangle-63"></div>
+        </div>
+      </div>
+      <div class="custom-hanger">
+
+        <div class="overlap-group4-1">
+          <div class="rectangle-64"></div>
+          <div class="tab-menu-1">Custom Trapeze Hanger</div>
+          <div class="flex-row-1">
+            <div class="frame-1">
+              <p class="text-1">Select and Fill up all required fields below to generate hanger model:</p>
+              <br>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"
+                style="min-width: 487px;">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion"
+                    href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h4 class="panel-title">
+                      <a role="button">
+                        Load
+                      </a>
+                      <span class="caret"></span>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+
+                      <br>
+                      <div class="dropdown">
+
+                        <label for="load">Select Load Type:</label>
+
+                        <select name="load" id="load">
+                          <option value="pt_Load">Point</option>
+                          <option value="uniform_Load">Uniform</option>
+                        </select>
+                      </div>
+                      <br>
+                      <div class="dropdown">
+
+                        <label for="deflection">Allowable Deflection (Span / 180):</label>
+
+                        <select name="deflection" id="deflection">
+                          <option value="volvo">180</option>
+                          <option value="saab">270</option>
+                          <option value="mercedes">360</option>
+                        </select>
+                      </div>
+                      <br>
+                      <div class="text-field-fill-osition-primary1">
+                        <label class="mdc-text-field mdc-text-field--filled">
+                          <span class="mdc-text-field__ripple"></span>
+                          <span class="mdc-floating-label" id="my-label-id">Load PSF</span>
+                          <input type="text" class="mdc-text-field__input" id="PSF_Load"
+                            aria-labelledby="my-label-id" />
+                          <span class="mdc-line-ripple"></span>
+                        </label>
+                        <script>
+                          mdc.autoInit();
+                          new mdc.textField.MDCTextField(document.querySelector(".text-field-fill-osition-primary1 .mdc-text-field"));
+                        </script>
+                      </div>
+                      <br><br>
+                      <div class="text-field-fill-osition-primary2">
+                        <label class="mdc-text-field mdc-text-field--filled">
+                          <span class="mdc-text-field__ripple"></span>
+                          <span class="mdc-floating-label" id="my-label-id">Horizontal lbs/in</span>
+                          <input type="text" class="mdc-text-field__input" id="horizontal_Load"
+                            aria-labelledby="my-label-id" />
+                          <span class="mdc-line-ripple"></span>
+                        </label>
+                        <script>
+                          mdc.autoInit();
+                          new mdc.textField.MDCTextField(document.querySelector(".text-field-fill-osition-primary2 .mdc-text-field"));
+                        </script>
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <a class="collapsed">
+                        Cable Tray
+                      </a>
+                      <span class="caret"></span>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      <br>
+                          <div class="text-field-fill-osition-primary3">
+                            <label class="mdc-text-field mdc-text-field--filled">
+                              <span class="mdc-text-field__ripple"></span>
+                              <span class="mdc-floating-label" id="my-label-id">Cable Tray Insulation</span>
+                              <input type="text" class="mdc-text-field__input" id="insulation"
+                                aria-labelledby="my-label-id" />
+                              <span class="mdc-line-ripple"></span>
+                            </label>
+                            <script>
+                              mdc.autoInit();
+                              new mdc.textField.MDCTextField(document.querySelector(".text-field-fill-osition-primary3 .mdc-text-field"));
+                            </script>
+                          </div>
+                          <br><br>
+                          <div class="text-field-fill-osition-primary4">
+                            <label class="mdc-text-field mdc-text-field--filled">
+                              <span class="mdc-text-field__ripple"></span>
+                              <span class="mdc-floating-label" id="my-label-id">Distance from Tray to Rod</span>
+                              <input type="text" class="mdc-text-field__input" id="DistToRod"
+                                aria-labelledby="my-label-id" />
+                              <span class="mdc-line-ripple"></span>
+                            </label>
+                            <script>
+                              mdc.autoInit();
+                              new mdc.textField.MDCTextField(document.querySelector(".text-field-fill-osition-primary4 .mdc-text-field"));
+                            </script>
+                          </div>
+                          <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <a class="collapsed">
+                        Channel
+                      </a>
+                      <span class="caret"></span>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                    aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <br>
+                          <div class="text-field-fill-osition-primary3">
+                            <label class="mdc-text-field mdc-text-field--filled">
+                              <span class="mdc-text-field__ripple"></span>
+                              <span class="mdc-floating-label" id="my-label-id">Channel Length</span>
+                              <input type="text" class="mdc-text-field__input" id="insulation"
+                                aria-labelledby="my-label-id" />
+                              <span class="mdc-line-ripple"></span>
+                            </label>
+                            <script>
+                              mdc.autoInit();
+                              new mdc.textField.MDCTextField(document.querySelector(".text-field-fill-osition-primary3 .mdc-text-field"));
+                            </script>
+                          </div>
+                          <br>
+                          
+                      <div class="dropdown" style="width: 50%; display: inline-block;">
+
+                        <label for="deflection">Chanel Type:</label>
+
+                        <select name="deflection" id="deflection">
+                          <option value="volvo">180</option>
+                          <option value="saab">270</option>
+                          <option value="mercedes">360</option>
+                        </select>
+                      </div>
+                      <div style="width: 30%; display: inline-block;">
+                        <label style="top: -18px">Chanel Direction:</label>
+                        <div class="btn-group" role="group" aria-label="..." style="height: 60px; margin-top: 5px;">
+                          <button type="button" class="btn btn-default">Up</button>
+                          <button type="button" class="btn btn-default">Down</button>
+                        </div></div>
+                      <br><br>
+                          <div class="text-field-fill-osition-primary4">
+                            <label class="mdc-text-field mdc-text-field--filled">
+                              <span class="mdc-text-field__ripple"></span>
+                              <span class="mdc-floating-label" id="my-label-id">Number of Tiers</span>
+                              <input type="text" class="mdc-text-field__input" id="DistToRod"
+                                aria-labelledby="my-label-id" />
+                              <span class="mdc-line-ripple"></span>
+                            </label>
+                            <script>
+                              mdc.autoInit();
+                              new mdc.textField.MDCTextField(document.querySelector(".text-field-fill-osition-primary4 .mdc-text-field"));
+                            </script>
+                          </div>
+                          <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFour">
+                    <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <a class="collapsed">
+                        Rod
+                      </a>
+                      <span class="caret"></span>
+                    </h4>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                      <br>
+                      <div class="text-field-fill-osition-primary1">
+                        <label class="mdc-text-field mdc-text-field--filled">
+                          <span class="mdc-text-field__ripple"></span>
+                          <span class="mdc-floating-label" id="my-label-id">Rod Length</span>
+                          <input type="text" class="mdc-text-field__input" id="trayWidth2"
+                            aria-labelledby="my-label-id" />
+                          <span class="mdc-line-ripple"></span>
+                        </label>
+                        <script>
+                          mdc.autoInit();
+                          new mdc.textField.MDCTextField(document.querySelector(".text-field-fill-osition-primary1 .mdc-text-field"));
+                        </script>
+                      </div>
+                      <br><br>
+                      <div class="dropdown">
+
+                        <label for="cars">Rod Diameter:</label>
+
+                        <select name="cars" id="cars">
+                          <option value="volvo">5/8 inches</option>
+                          <option value="saab">3/4 inches</option>
+                        </select>
+                      </div>
+                      <br>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFive">
+                    <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      <a class="collapsed">
+                        Fitting
+                      </a>
+                      <span class="caret"></span>
+                    </h4>
+                  </div>
+                  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                    <div class="panel-body">
+                      <br>
+                      <div class="dropdown">
+
+                        <label for="cars">Select Upper Fitting Type:</label>
+
+                        <select name="cars" id="cars">
+                          <option value="volvo">Concrete - Anchor</option>
+                          <option value="saab">Concrete - Deck</option>
+                          <option value="mercedes">Steel Joist</option>
+                          <option value="audi">Beam Clamp</option>
+                        </select>
+                      </div>
+                      <br>
+                      <div class="dropdown">
+
+                        <label for="cars">Select Lower Fitting Type:</label>
+
+                        <select name="cars" id="cars">
+                          <option value="volvo">Default</option>
+                          <option value="saab">None</option>
+                        </select>
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="generate" onclick="greet()">
+                <div class="primary-1">Generate Hanger</div>
+              </div>
+            </div>
+            <div id="canvasA" class="aaaaaaaaaaaaaaaaaaaaa-4"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex-row-2">
+        <div class="download-hanger">
+          <div class="submit">Download Hanger!</div>
+        </div>
+        <div class="quote">
+          <div class="submit">Get A Quote!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let ptUniform, deflection, load, horizontal
+    let trayWidth, insulation, distToRod
+    let channelLen, channelType
+    let rodLen, rodDiameter
+    let upperFitting, lowerFitting
+    // let input, button, greeting;
+
+    let ptUniformVal, deflectionVal, loadVal, horizontalVal
+    let trayWidthVal, insulationVal, distToRodVal
+    let channelLenVal, channelTypeVal
+    let rodLenVal, rodDiameterVal
+    let upperFittingVal, lowerFittingVal
+
+    let input, button, greeting;
+    let channel, rod, span
+    let channelVal, rodVal, spanVal
+
+    let windowWidth = 650
+    let windowHeight = 480
+    let mult = 9
+    let bottomMult = 10
+
+    function setup() {
+      // create canvas
+
+      let canvas = createCanvas(windowWidth, windowHeight);
+      canvas.parent('canvasA');
+
+      ptUniform = document.getElementById("ptUniform")
+      deflection = document.getElementById("deflection")
+      load = document.getElementById("load")
+      horizontal = document.getElementById("horizontal")
+
+      trayWidth = document.getElementById("trayWidth2")
+      insulation = document.getElementById("insulation")
+      distToRod = document.getElementById("distToRod")
+
+      channelLen = document.getElementById("channelLen")
+      channelType = document.getElementById("channelType")
+
+      rodLen = document.getElementById("rodLen")
+      rodDiameter = document.getElementById("rodDiameter")
+
+      upperFitting = document.getElementById("upperFitting")
+      lowerFitting = document.getElementById("lowerFitting")
+
+      channel = document.getElementById("channel")
+      rod = document.getElementById("rod")
+      rodDiameter = document.getElementById("rodDiameter")
+      button = document.getElementById("press")
+
+      textAlign(CENTER);
+      textSize(50);
+      greet()
+    }
+
+    function drawChannel() {
+      fill("#b7d6a3")
+      rect(windowWidth / 2 - channelLenVal / 2, windowHeight - mult * bottomMult, channelLenVal, 2 * mult)
+    }
+    function drawRods() {
+      fill("#98afd8")
+      rect((windowWidth / 2 + (trayWidthVal / 2 + insulationVal + distToRodVal)), windowHeight - mult * bottomMult, rodDiameterVal, -rodLenVal)
+      rect((windowWidth / 2 - (trayWidthVal / 2 + insulationVal + distToRodVal)), windowHeight - mult * bottomMult, -rodDiameterVal, -rodLenVal)
+    }
+    function drawCableTray() {
+      fill('white')
+      rect((windowWidth / 2 - trayWidthVal / 2), windowHeight - mult * bottomMult, trayWidthVal, -mult * 5)
+    }
+    function drawLowerFittings() {
+      fill('#f6be98')
+      rect((windowWidth / 2 + (trayWidthVal / 2 + insulationVal + distToRodVal + (rodDiameterVal / 2) - 15 / 2)), windowHeight - mult * bottomMult, 15, -15)
+      rect((windowWidth / 2 - (trayWidthVal / 2 + insulationVal + distToRodVal + (rodDiameterVal / 2) - 15 / 2)), windowHeight - mult * bottomMult, -15, -15)
+    }
+    function drawUpperFittings() {
+      fill('#ff7f7f')
+      rect((windowWidth / 2 + (trayWidthVal / 2 + insulationVal + distToRodVal + (rodDiameterVal / 2) - 15 / 2)), (windowHeight - mult * bottomMult) - rodLenVal, 15, -15)
+      rect((windowWidth / 2 - (trayWidthVal / 2 + insulationVal + distToRodVal + (rodDiameterVal / 2) - 15 / 2)), (windowHeight - mult * bottomMult) - rodLenVal, -15, -15)
+    }
+
+    function greet() {
+
+      ptUniformVal = ptUniform.value * mult;
+      deflectionVal = deflection.value * mult;
+      loadVal = load.value * mult;
+      horizontalVal = horizontal.value * mult;
+
+      trayWidthVal = trayWidth.value * mult;
+      insulationVal = insulation.value * mult;
+      distToRodVal = distToRod.value * mult;
+
+      channelLenVal = channelLen.value * mult;
+      channelTypeVal = channelType.value * mult;
+
+      rodLenVal = rodLen.value * mult;
+      rodDiameterVal = rodDiameter.value * mult;
+
+      upperFittingVal = upperFitting.value * mult;
+      lowerFittingVal = lowerFitting.value * mult;
+
+      // channel = document.getElementById("channel")
+      // rod = document.getElementById("rod")
+      // rodDiameter = document.getElementById("rodDiameter")
+      // button = document.getElementById("press")
+
+
+      // channelVal = channel.value * mult;
+      // rodVal = rod.value * mult;
+      // rodDiameterVal = rodDiameter.value * mult;
+      background('white')
+      drawChannel()
+      drawRods()
+      drawCableTray()
+      drawLowerFittings()
+      drawUpperFittings()
+
+    }
+  </script>
+  <div style="display: none;">
+  <h2>Load</h2>
+  <table style="text-align: right;">
+    <tr>
+      <td>
+        <label>PT or Uniform</label>
+      </td>
+      <td>
+        <input type="number" id="ptUniform" value="0">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Allowable Deflection</label>
+      </td>
+      <td>
+        <input type="number" id="deflection" value="180">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Load Per Sq Ft</label>
+      </td>
+      <td>
+        <input type="number" id="load" value="10">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Horizontal lbs/in</label>
+      </td>
+      <td>
+        <input type="number" id="horizontal" value="10">
+      </td>
+    </tr>
+  </table>
+
+  <h2>Cable Tray</h2>
+  <table style="text-align: right;">
+    <tr>
+      <td>
+        <label>Tray Width</label>
+      </td>
+      <td>
+        <input type="number" id="trayWidth" value="40">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Insulation</label>
+      </td>
+      <td>
+        <input type="number" id="insulation" value="0">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Distance from duct to rod</label>
+      </td>
+      <td>
+        <input type="number" id="distToRod" value="2">
+      </td>
+    </tr>
+  </table>
+
+  <h2>Channel</h2>
+  <table style="text-align: right;">
+    <tr>
+      <td>
+        <label>Channel Length</label>
+      </td>
+      <td>
+        <input type="number" id="channelLen" value="48">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Channel Type</label>
+      </td>
+      <td>
+        <input type="number" id="channelType" value="0">
+      </td>
+    </tr>
+  </table>
+
+  <h2>Rod</h2>
+  <table style="text-align: right;">
+    <tr>
+      <td>
+        <label>Rod Length</label>
+      </td>
+      <td>
+        <input type="number" id="rodLen" value="40">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Rod Diameter</label>
+      </td>
+      <td>
+        <input type="number" id="rodDiameter" value="0.5">
+      </td>
+    </tr>
+  </table>
+
+  <h2>Fitting</h2>
+  <table style="text-align: right;">
+    <tr>
+      <td>
+        <label>Upper Fitting</label>
+      </td>
+      <td>
+        <input type="number" id="upperFitting" value="40">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Lower Fitting</label>
+      </td>
+      <td>
+        <input type="number" id="lowerFitting" value="0.5">
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+
+</html>

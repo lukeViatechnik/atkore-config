@@ -1,0 +1,56 @@
+:root { 
+  --apple: #47a943;
+  --athens-gray: #eef0f1;
+  --black: #000000;
+  --gun-powder: #3f4857;
+  --mercury: #dee2e6;
+  --mischka: #ced4da;
+  --nobel: #b4b4b1;
+  --pale-sky: #6c757d;
+  --white: #ffffff;
+ 
+  --font-size-l: 14px;
+  --font-size-m: 12px;
+  --font-size-s: 10px;
+  --font-size-xl: 15px;
+  --font-size-xxl: 18px;
+  --font-size-xxxl: 24px;
+ 
+  --font-family-abeezee: "ABeeZee", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.roboto-bold-black-15px {
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-normal-pale-sky-14px {
+  color: var(--pale-sky);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.abeezee-normal-gun-powder-12px {
+  color: var(--gun-powder);
+  font-family: var(--font-family-abeezee);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.abeezee-normal-nobel-12px {
+  color: var(--nobel);
+  font-family: var(--font-family-abeezee);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.border-0-9px-mischka {
+  border: 0.9px solid var(--mischka);
+}
